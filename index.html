@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nex Movie</title>
+    <!-- Bootstrap + Font Awesome-->
+    <link rel="stylesheet" href="./node_modules/colormyar/css/pdf.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./packages/fontawesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="./node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Owl Carousel -->
+    <link
+      rel="stylesheet"
+      href="./packages/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./packages/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-control navbar-expand-lg navbar-dark bg-dark animate__animated shadow-md"
+    >
+      <div class="container">
+        <a class="navbar-brand text-uppercase fs-2 hover-red" href="#"
+          ><i class="fa-solid fa-clapperboard-play"></i> Nex Movie</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link me-4 active-nav fs-5"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-4 fs-5" href="#">Movie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="#">TV Show</a>
+            </li>
+          </ul>
+          <div class="d-none d-xl-block">
+            <a class="text-decoration-none text-white" href="#">
+              <i class="hover-red bell fa-solid fa-bell me-3 fs-3"></i
+            ></a>
+            <a class="text-decoration-none text-white" href="#">
+              <i class="hover-red fa-solid fa-user ms-2 fs-3"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="main" class="container-fluid mt-5">
+      <div
+        class="d-flex justify-content-between align-items-center flex-lg-row flex-column"
+      >
+        <!-- Left -->
+        <div class="col-lg-5 ms-md-5">
+          <div class="ms-lg-5">
+            <div
+              class="d-flex fw-bold justify-content-start align-items-center fs-5 mt-md-4 mt-5"
+            >
+              <i
+                class="fa-solid fa-star pdf-text-yellow-400 pdf-shadow me-lg-4 me-2"
+              ></i>
+              <span class="me-md-4 me-2">8.2</span>
+              <span class="me-md-5 me-3">-</span>
+              <span class="me-md-5 me-3">2017</span>
+              <span class="me-md-4 me-2">-</span>
+              <span class="me-md-3 me-2">5 Seasons</span>
+              <div class="rating-box border rounded px-2 fs-6 fw-normal">
+                18+
+              </div>
+            </div>
+            <div class="my-4">
+              <h1 class="text-uppercase fw-bolder">Money Heist</h1>
+            </div>
+            <div class="col-lg-9">
+              <p>
+                Eight thieves take hostages and lock themselves in the Royal
+                Mint of Spain as a criminal mastermind manipulates the police to
+                carry out his plan.
+              </p>
+            </div>
+            <div class="mb-2">
+              <span class="pdf-text-stone-500">Starring:</span> Úrsula Corberó,
+              Álvaro Morte, Itziar Ituño
+            </div>
+            <div class="">
+              <span class="pdf-text-stone-500">Creators:</span> Álex Pina
+            </div>
+            <div class="d-flex justify-content-start align-items-center my-3">
+              <div class="border rounded-10 px-3 py-1 me-md-3 me-2">Action</div>
+              <div class="border rounded-10 px-3 py-1 me-md-3 me-2">Crime</div>
+              <div class="border rounded-10 px-3 py-1">Drama</div>
+            </div>
+            <div class="mt-4">
+              <button class="btn btn-danger bg-red py-2 me-2">
+                <i class="fa-solid fa-play mx-2"></i> Watch Now
+              </button>
+              <button class="btn btn-secondary pdf-bg-zinc-500 py-2">
+                <i class="fa-solid fa-plus-large mx-2"></i> Add to list
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Right -->
+        <div class="col-lg-6">
+          <img src="./img/banner.jpg" class="w-100" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Trending-->
+    <div class="my-5" id="trending">
+      <div class="container">
+        <h2 class="mv-title fw-bolder">Trending</h2>
+        <div class="">
+          <div class="">
+            <!-- Set up your HTML -->
+            <div class="owl-carousel">
+              <div>Your Content</div>
+              <div>Your Content</div>
+              <div>Your Content</div>
+              <div>Your Content</div>
+              <div>Your Content</div>
+              <div>Your Content</div>
+              <div>Your Content</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./packages/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
