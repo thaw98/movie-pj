@@ -11,7 +11,7 @@ var waypoint = new Waypoint({
       document.querySelector(".navbar").classList.remove("shadow-slate-400");
     }
   },
-  offset: "70%",
+  offset: "80%",
 });
 // Carousel
 var swiper = new Swiper(".mySwiper", {
@@ -36,8 +36,8 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 4,
-      spaceBetween: 40,
+      slidesPerView: 3,
+      spaceBetween: 30,
     },
     1024: {
       slidesPerView: 5,
