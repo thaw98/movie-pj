@@ -2,6 +2,12 @@
   --red: #e50914;
   --gray: #8d8d8d;
 }
+.fs-7 {
+  font-size: 0.8rem;
+}
+.rounded-5 {
+  border-radius: 5px;
+}
 .rounded-10 {
   border-radius: 10px;
 }
@@ -75,10 +81,9 @@
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
+  /* text-align: center;
+  font-size: 18px; */
   background: #fff;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -107,9 +112,7 @@
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+  background: transparent !important;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -135,11 +138,80 @@
 
 /* Custom slider */
 .swiper-pagination-bullet-active {
-  background-color: var(--red);
+  background-color: var(--red) !important;
 }
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--red);
+}
+/* .swiper-slide {
+  margin-left: 50px;
+} */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-family: FontAwesome;
+  font-size: 2em;
+  margin-top: -50px;
+}
+.swiper-button-next::after {
+  content: "\f138";
+}
+.swiper-button-prev::after {
+  content: "\f137";
+}
+/* Pagination */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  border: 2px solid var(--red);
+  background: #fff;
+}
+/* Heart hover */
+.heart {
+  transition: 0.5s;
+}
+.heart.active {
+  color: var(--red);
+}
+.heart:hover {
+  color: var(--red);
+  transform: scale(1.5);
+}
+/* Movie hover */
+.poster-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.play-hover {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.movie:hover .poster-img {
+  opacity: 0.35;
+}
+
+.movie:hover .play-hover {
+  opacity: 1;
+}
+
+.play-btn {
+  background-color: transparent;
+  color: #fff;
+  font-size: 4rem;
+  padding: 16px 32px;
+  margin-top: -70px;
 }
 /* Responsive */
 @media screen and (min-width: 992px) {
