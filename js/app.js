@@ -1,3 +1,4 @@
+// Waypoint
 var waypoint = new Waypoint({
   element: document.getElementById("trending"),
   handler: function (direction) {
@@ -40,8 +41,34 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
     },
     1024: {
-      slidesPerView: 5,
-      spaceBetween: 50,
+      slidesPerView: 4,
+      spaceBetween: 40,
     },
   },
+});
+// Isostope
+// init Isotope
+var $grid = $(".movie-list").isotope({
+  // options
+});
+// filter items on button click
+$(".filter-button-group").on("click", "button", function () {
+  var filterValue = $(this).attr("data-filter");
+  resetFilterBtn();
+  $(this).addClass("active-filter-btn");
+  $(this).addClass("fw-bolder");
+  $(this).removeClass("pdf-text-zinc-500");
+  $grid.isotope({ filter: filterValue });
+});
+var filterBtn = $(".filter-button-group").find("button");
+function resetFilterBtn() {
+  filterBtn.each(function () {
+    $(this).removeClass("active-filter-btn");
+    $(this).removeClass("fw-bolder");
+    $(this).addClass("pdf-text-zinc-500");
+  });
+}
+// Toggle
+$(".item-btn").click(function () {
+  $(this).find("i").toggleClass("fas fa-plus fas fa-minus");
 });

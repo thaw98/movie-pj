@@ -11,6 +11,7 @@
 .rounded-10 {
   border-radius: 10px;
 }
+/* Menu navigation */
 .navbar-brand {
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -27,6 +28,9 @@
 .bell:hover {
   animation: ringing 1.5s infinite ease-in-out;
 }
+.settings:hover {
+  animation: spining 3.5s infinite linear;
+}
 @keyframes ringing {
   0% {
     transform: rotate(0deg);
@@ -40,6 +44,14 @@
   }
   100% {
     transform: scale(-35deg);
+  }
+}
+@keyframes spining {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 /* Navbar control */
@@ -260,18 +272,90 @@
   transform: scaleX(1);
 }
 /* Catalog link */
-.catalog-link {
-  position: relative;
+
+.filter-button-group .btn:hover {
+  color: #fff !important;
 }
-/* Responsive */
-@media screen and (min-width: 992px) {
-  .active-nav::after {
-    content: "";
-    top: 5px;
-    display: block;
-    background-color: var(--red);
-    width: 100%;
-    height: 2px;
-    margin-top: -4px;
-  }
+.active-filter-btn {
+  background-color: transparent !important;
+}
+.active-filter-btn::after {
+  content: "";
+  display: block;
+  margin: auto;
+  background-color: var(--red);
+  width: 100%;
+  height: 2px;
+}
+
+/* .active-filter-btn::after {
+  content: "";
+  display: block;
+  margin: auto;
+  background-color: var(--red);
+  width: 100%;
+  height: 2px;
+  transition: 0.5s;
+}
+.active-filter-btn:hover::after {
+  width: 100%;
+} */
+/* .catalog-link {
+  color: var(--gray);
+  background-color: transparent !important;
+  outline: none !important;
+  border: none !important;
+}
+.catalog-link:hover {
+  color: #fff;
+} */
+/* .catalog-link::after {
+  content: "";
+  position: absolute;
+  background-color: var(--red);
+  width: 0%;
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  transition: 0.5s;
+}
+.catalog-link:hover::after {
+  left: 0;
+  width: 100%;
+} */
+/* .movie-ls {
+  background-color: transparent !important;
+  outline: none !important;
+  border: none !important;
+  color: #fff;
+} */
+/* Button view more */
+.view-more {
+  background-color: var(--red);
+  border: 3px solid var(--red) !important;
+  transition: 0.5s ease;
+}
+.view-more:hover {
+  color: var(--red);
+  background-color: transparent;
+}
+/* FAQ */
+.faq::after {
+  content: "";
+  margin: auto;
+  display: block;
+  background-color: var(--red);
+  width: 18%;
+  height: 2px;
+  margin-top: 2px;
+}
+/* Nav active */
+.active-nav::after {
+  content: "";
+  top: 5px;
+  display: block;
+  background-color: var(--red);
+  width: 100%;
+  height: 2px;
+  margin-top: -4px;
 }

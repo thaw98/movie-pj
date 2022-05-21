@@ -32,12 +32,33 @@
     <nav
       class="navbar navbar-control navbar-expand-lg navbar-dark bg-dark animate__animated shadow-md"
     >
-      <div class="container">
-        <a class="navbar-brand text-uppercase fs-2 hover-red" href="#"
+      <div
+        class="container d-flex justify-content-lg-center justify-content-between align-items-center"
+      >
+        <a
+          class="navbar-brand text-uppercase fs-2 hover-red flex-grow-1"
+          href="#"
           ><i class="fa-solid fa-clapperboard-play"></i> Nex Movie</a
         >
+        <div class="order-lg-3">
+          <a class="text-decoration-none text-white position-relative" href="#">
+            <i class="hover-red bell fa-solid fa-bell me-lg-3 me-2 fs-3"></i>
+            <span
+              class="position-absolute top-1 start-50 translate-middle badge rounded-pill bg-danger"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span></a
+          >
+          <a class="text-decoration-none text-white" href="#">
+            <i class="hover-red fa-solid fa-user me-lg-3 me-2 fs-3"></i
+          ></a>
+          <a class="text-decoration-none text-white" href="">
+            <i class="hover-red settings fa-solid fa-gear fs-3 me-md-2"></i>
+          </a>
+        </div>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0 ms-2"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -45,10 +66,12 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="fa-regular fa-bars fs-2"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+          <ul
+            class="navbar-nav ms-auto me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-lg-center align-items-start"
+          >
             <li class="nav-item">
               <a
                 class="nav-link me-4 active-nav fs-5"
@@ -64,14 +87,6 @@
               <a class="nav-link fs-5" href="#">TV Show</a>
             </li>
           </ul>
-          <div class="d-none d-xl-block">
-            <a class="text-decoration-none text-white" href="#">
-              <i class="hover-red bell fa-solid fa-bell me-3 fs-3"></i
-            ></a>
-            <a class="text-decoration-none text-white" href="#">
-              <i class="hover-red fa-solid fa-user ms-2 fs-3"></i
-            ></a>
-          </div>
         </div>
       </div>
     </nav>
@@ -99,7 +114,7 @@
             <div class="my-4">
               <h1 class="text-uppercase fw-bolder">Money Heist</h1>
             </div>
-            <div class="col-lg-9">
+            <div class="col-md-9">
               <p>
                 Eight thieves take hostages and lock themselves in the Royal
                 Mint of Spain as a criminal mastermind manipulates the police to
@@ -305,15 +320,26 @@
       <div
         class="d-flex justify-content-between align-items-center my-4 flex-column flex-md-row"
       >
-        <div class="mb-4 mb-md-0">
-          <a href="catalog-link" class="text-white text-decoration-none me-3"
-            >All</a
+        <div
+          class="filter-button-group mb-4 mb-md-0 d-flex justify-content-evenly align-content-center"
+        >
+          <button
+            data-filter="*"
+            class="ms-md-n2 btn shadow-none border-none active-filter-btn"
           >
-          <a href="" class="text-white text-decoration-none me-3">Series</a>
-          <a href="" class="text-white text-decoration-none me-3">Movies</a>
-          <a href="" class="text-white text-decoration-none me-3">Animes</a>
-          <a href="" class="text-white text-decoration-none">Documentary</a>
+            All
+          </button>
+          <button data-filter=".series" class="btn shadow-none border-none">
+            Series
+          </button>
+          <button data-filter=".movies" class="btn shadow-none border-none">
+            Movies
+          </button>
+          <button data-filter=".cartoon" class="btn shadow-none border-none">
+            Cartoon
+          </button>
         </div>
+        <!-- Search -->
         <div class="wrapper">
           <div class="input-data">
             <input
@@ -330,7 +356,361 @@
         </div>
       </div>
     </div>
+    <!-- All -->
+    <div class="container">
+      <div class="movie-list row justify-content-center align-items-center">
+        <div class="movies col-lg-3 col-md-5">
+          <div class="swiper-slide">
+            <div class="text-start mb-5">
+              <div class="movie">
+                <img
+                  src="./img/fury.jpg"
+                  class="poster-img rounded-5 mb-2"
+                  alt=""
+                />
+                <div class="play-hover">
+                  <div class="play-btn">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
+                </div>
+              </div>
+
+              <span class="fw-bold fs-5">Fury</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                  <i class="fa-solid fa-star pdf-text-yellow-400 me-1"></i>8.0
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-eye me-1"></i>5.9K
+                  <i class="fa-solid fa-heart ms-2 heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="series col-lg-3 col-md-5">
+          <div class="swiper-slide">
+            <div class="text-start mb-5">
+              <div class="movie">
+                <img
+                  src="./img/xfiles.jpg"
+                  class="poster-img rounded-5 mb-2"
+                  alt=""
+                />
+                <div class="play-hover">
+                  <div class="play-btn">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
+                </div>
+              </div>
+
+              <span class="fw-bold fs-5">The X-Files</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                  <i class="fa-solid fa-star pdf-text-yellow-400 me-1"></i>8.6
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-eye me-1"></i>8.1K
+                  <i class="fa-solid fa-heart ms-2 heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cartoon col-lg-3 col-md-5">
+          <div class="swiper-slide">
+            <div class="text-start mb-5">
+              <div class="movie">
+                <img
+                  src="./img/shrek.jpg"
+                  class="poster-img rounded-5 mb-2"
+                  alt=""
+                />
+                <div class="play-hover">
+                  <div class="play-btn">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
+                </div>
+              </div>
+
+              <span class="fw-bold fs-5">Shrek</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                  <i class="fa-solid fa-star pdf-text-yellow-400 me-1"></i>7.9
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-eye me-1"></i>10K
+                  <i class="fa-solid fa-heart ms-2 heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="series col-lg-3 col-md-5">
+          <div class="swiper-slide">
+            <div class="text-start mb-5">
+              <div class="movie">
+                <img
+                  src="./img/csi_miami.jpg"
+                  class="poster-img rounded-5 mb-2"
+                  alt=""
+                />
+                <div class="play-hover">
+                  <div class="play-btn">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
+                </div>
+              </div>
+
+              <span class="fw-bold fs-5">CSI: Miami</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                  <i class="fa-solid fa-star pdf-text-yellow-400 me-1"></i>7.4
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-eye me-1"></i>3.3K
+                  <i class="fa-solid fa-heart ms-2 heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cartoon col-lg-3 col-md-5">
+          <div class="swiper-slide">
+            <div class="text-start mb-5">
+              <div class="movie">
+                <img
+                  src="./img/iceage.jpg"
+                  class="poster-img rounded-5 mb-2"
+                  alt=""
+                />
+                <div class="play-hover">
+                  <div class="play-btn">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
+                </div>
+              </div>
+
+              <span class="fw-bold fs-5">Ice Age: The Meltdown</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                  <i class="fa-solid fa-star pdf-text-yellow-400 me-1"></i>6.4
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-eye me-1"></i>11K
+                  <i class="fa-solid fa-heart ms-2 heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="documentary movies col-lg-3 col-md-5">
+          <div class="swiper-slide">
+            <div class="text-start mb-5">
+              <div class="movie">
+                <img
+                  src="./img/MissAmericana.jpg"
+                  class="poster-img rounded-5 mb-2"
+                  alt=""
+                />
+                <div class="play-hover">
+                  <div class="play-btn">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
+                </div>
+              </div>
+
+              <span class="fw-bold fs-5">Taylor Swift: Miss Americana</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                  <i class="fa-solid fa-star pdf-text-yellow-400 me-1"></i>7.3
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-eye me-1"></i>22K
+                  <i class="fa-solid fa-heart ms-2 heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="series col-lg-3 col-md-5">
+          <div class="swiper-slide">
+            <div class="text-start mb-5">
+              <div class="movie">
+                <img
+                  src="./img/24.jpg"
+                  class="poster-img rounded-5 mb-2"
+                  alt=""
+                />
+                <div class="play-hover">
+                  <div class="play-btn">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
+                </div>
+              </div>
+
+              <span class="fw-bold fs-5">24</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                  <i class="fa-solid fa-star pdf-text-yellow-400 me-1"></i>7.9
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-eye me-1"></i>4.9K
+                  <i class="fa-solid fa-heart ms-2 heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="movies col-lg-3 col-md-5">
+          <div class="swiper-slide">
+            <div class="text-start mb-5">
+              <div class="movie">
+                <img
+                  src="./img/spiderman.jpg"
+                  class="poster-img rounded-5 mb-2"
+                  alt=""
+                />
+                <div class="play-hover">
+                  <div class="play-btn">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
+                </div>
+              </div>
+
+              <span class="fw-bold fs-5">Spider Man</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="">
+                  <i class="fa-solid fa-star pdf-text-yellow-400 me-1"></i>8.4
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-eye me-1"></i>9.7K
+                  <i class="fa-solid fa-heart ms-2 heart active"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-5">
+      <div class="d-flex justify-content-center align-items-center">
+        <button
+          class="btn shadow-none view-more fw-bold border-3 rounded-3 px-5"
+        >
+          View More
+        </button>
+      </div>
+    </div>
+    <!-- FAQ -->
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center">
+        <h2 class="mt-2 mb-5 faq">Frequently Asked Questions</h2>
+      </div>
+      <div class="">
+        <div class="">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="item-btn accordion-button pdf-bg-neutral-800 text-white"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It
+                  is shown by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="item-btn accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  Accordion Item #2 <i class="fas fa-plus float-right"></i>
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="item-btn accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/isotope-layout/dist/isotope.pkgd.min.js"></script>
     <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
