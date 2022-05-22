@@ -346,8 +346,39 @@
   display: block;
   background-color: var(--red);
   width: 18%;
-  height: 2px;
+  height: 3px;
   margin-top: 2px;
+}
+/* FAQ section */
+.accordion-button:not(.collapsed) {
+  color: var(--red) !important;
+  font-weight: 500 !important;
+}
+.accordion-button::after {
+  display: none !important;
+}
+.accordion-button:not(.collapsed)::after {
+  display: none !important;
+}
+/* Sub section*/
+.sub-input {
+  /* width: 100% !important; */
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.sub-btn {
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: var(--red);
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.sub-input,
+.sub-btn {
+  height: 40px;
 }
 /* Nav active */
 .active-nav::after {

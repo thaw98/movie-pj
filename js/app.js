@@ -70,5 +70,5 @@ function resetFilterBtn() {
 }
 // Toggle
 $(".item-btn").click(function () {
-  $(this).find("i").toggleClass("fas fa-plus fas fa-minus");
+  $(this).find("i").toggleClass("fas fa-plus-large fas fa-xmark-large");
 });
