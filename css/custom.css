@@ -374,7 +374,13 @@
   background-color: var(--red);
   border: none;
   outline: none;
-  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+  cursor: pointer;
+  font-weight: 500;
+}
+.sub-btn:hover {
+  background-color: #ba030c;
 }
 .sub-input,
 .sub-btn {
